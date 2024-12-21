@@ -1,0 +1,7 @@
+<div class="flex flex-col items-center gap-2">
+  <div class="flex flex-col w-full"  style="max-width: 600px;">
+    <label class="label">Nome do jogador</label>
+    <input type="text w-full" [(ngModel)]="playerName" placeholder="Digite seu nome" class="input" />
+  </div>
+  <button class="button primary w-full"  style="max-width: 600px;" (click)="joinGame()">Join</button>
+</div>

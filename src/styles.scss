@@ -1,1 +1,159 @@
-/* You can add global styles to this file, and also import other style files */
+/* Importações e configurações base */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Configurações gerais */
+body {
+  background-color: #118FE6;
+  font-family: "Be Vietnam Pro", serif;
+}
+
+label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+
+input {
+  background-color: #fff;
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 6px;
+  border-width: 0.5px;
+}
+
+/* Componentes */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 600px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 16px 0 8px;
+  font-weight: 700;
+  border-radius: 6px 6px 0 0;
+}
+
+.header-table {
+  @extend .header;
+  background-color: #6D7283;
+}
+
+.header-timer {
+  @extend .header;
+  background-color: #296DD0;
+}
+
+.header-winner {
+  @extend .header;
+  background-color: #F7BE1E;
+}
+
+.body {
+  background-color: #E3EEF5;
+  padding: 24px;
+  border-radius: 0 0 6px 6px;
+  font-weight: 800;
+}
+
+.body-table {
+  @extend .body;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.body-timer {
+  @extend .body;
+  background: url("./assets/timer.svg") no-repeat center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.body-winner {
+  @extend .body;
+  background: url('./assets/winner.svg') no-repeat center;
+  background-size: cover;
+  font-size: 40px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer {
+  font-size: 40px;
+  font-weight: 900;
+}
+
+/* Botões */
+.button {
+  font-size: 25px;
+  font-weight: 800;
+  text-align: center;
+  padding: 16px;
+  border: none;
+  border-radius: 6px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button.primary {
+  background-color: #F7BE1E;
+  color: #000;
+  box-shadow: 0px 5px 0px #AE8000;
+}
+
+.button.primary:hover {
+  background-color: #E6A900;
+  box-shadow: 0px 8px 0px #8C6A00;
+}
+
+.button.secondary {
+  background-color: #3CBB12;
+  color: #fff;
+  box-shadow: 0px 5px 0px #2B9A06;
+}
+
+.button.secondary:hover {
+  background-color: #34A10C;
+  box-shadow: 0px 8px 0px #228B08;
+}
+
+/* Grade de jogadores */
+.players-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding: 16px;
+  border-radius: 0 0 8px 8px;
+  background-color: #E3EEF5;
+}
+
+.player-row {
+  display: contents;
+}
+
+.player-row span {
+  padding: 4px;
+  text-align: center;
+}
+
+.player-row span:last-child {
+  text-transform: capitalize;
+}

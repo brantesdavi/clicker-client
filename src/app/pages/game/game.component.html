@@ -1,0 +1,34 @@
+<div class="flex justify-center items-center flex-col gap-2">
+  <div class="max-width-600" style="width: 100%; max-width: 600px;">
+    <div class="header-table">
+      Jogadores
+    </div>
+    <div *ngIf="players" class="players-grid">
+      <div *ngFor="let player of players" class="player-row">
+        <span>{{ player.name }}</span>
+        <span>{{ player.accumulatedTime }} segundos</span>
+        <span [ngClass]="{ 'active': player.status === 1, 'eliminated': player.status !== 1 }">
+          {{ player.status === 1 ? 'Ativo' : 'Eliminado' }}
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div style="width: 100%; max-width: 600px;" *ngIf="isMyTurn">
+    <div class="header-timer">
+      Seu turno
+    </div>
+    <div class="body-timer">
+      <app-timer [ngClass]="{ hidden: !showTimer, block: showTimer }"></app-timer>
+    </div>
+  </div>
+
+  <div style="width: 100%; max-width: 600px;">
+    <button
+      *ngIf="isMyTurn && showTimer"
+      class="button secondary"
+      (click)="onPlayerClick()">
+      Click!
+    </button>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="flex flex-col items-center gap-2">
+  <div class="w-full" style="max-width: 600px;">
+    <div class="header-table">
+      Jogadores Conectados
+    </div>
+    <div class="body-table">
+      <span *ngFor="let player of players">{{ player.name }}</span>
+    </div>
+  </div>
+  <button style="max-width: 600px;" class="button primary" *ngIf="isHost && canStartGame" (click)="startGame()">Play!</button>
+</div>

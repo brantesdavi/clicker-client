@@ -1,0 +1,11 @@
+<div class="flex flex-col items-center gap-2">
+  <div class="w-full" style="max-width: 600px;"  *ngIf="players">
+    <div class="header-winner">
+      Ganhador(a)
+    </div>
+    <div class="body-winner" *ngIf="winner">
+      <span>{{ winner.name }}</span>
+    </div>
+  </div>
+  <button style="max-width: 600px;" class="button primary" (click)="navigateToHome()">New game!</button>
+</div>
