@@ -3,13 +3,8 @@ import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import { SignalRConnectionService, SignalREvent } from '../signal-r-connection/signal-r-connection.service';
 import { GameStateService } from './game-state.service';
+import { Player } from '../../models/Player.interface';
 
-export interface Player {
-  name: string;
-  accumulatedTime: number;
-  id: string;
-  status: number
-}
 
 @Injectable({
   providedIn: 'root'

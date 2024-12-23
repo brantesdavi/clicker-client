@@ -1,8 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
-import { GameService, Player } from '../../services/game/game.service';
+import { GameService } from '../../services/game/game.service';
 import { combineLatest, map, Observable, Subscription } from 'rxjs';
 import { TimerComponent } from '../../components/timer/timer.component';
 import { GameStateService } from '../../services/game/game-state.service';
+import { Player } from '../../models/Player.interface';
 
 @Component({
   selector: 'app-game',

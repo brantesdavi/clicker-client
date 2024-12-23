@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { GameService, Player } from '../../services/game/game.service';
+import { GameService } from '../../services/game/game.service';
 import { Router } from '@angular/router';
 import { GameStateService } from '../../services/game/game-state.service';
 import { Subscription } from 'rxjs';
+import { Player } from '../../models/Player.interface';
 
 @Component({
   selector: 'app-lobby',
